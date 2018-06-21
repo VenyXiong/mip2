@@ -296,10 +296,11 @@ class MipShell extends CustomElement {
   handleClickHeaderButton (buttonName) {
     if (buttonName === 'back') {
       // **Important** only allow transition happens when Back btn & <a> clicked
-      if (isPortrait()) {
-        page.allowTransition = true
-      }
-      page.direction = 'back'
+      // if (isPortrait()) {
+      //   page.allowTransition = true
+      // }
+      // page.direction = 'back'
+      console.log('resume back transition!!!')
       // SF can help to navigate by 'changeState' when standalone = false
       if (window.MIP.standalone) {
         window.MIP_ROUTER.go(-1)

@@ -325,6 +325,10 @@ class Page {
     window.addEventListener(SCROLL_TO_ANCHOR_CUSTOM_EVENT, (e) => {
       this.scrollToHash(e.detail[0])
     })
+
+    // document.body.addEventListener('click', function (e) {
+    //   window.alert(e.target.tagName)
+    // })
   }
 
   // ========================= Util functions for developers =========================
