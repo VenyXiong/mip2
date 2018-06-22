@@ -39,7 +39,7 @@ export function createIFrame (fullpath, pageId, {onLoad, onError} = {}) {
    */
   container.style.height = `${viewport.getHeight()}px`
   container.setAttribute('width', '100%')
-  container.setAttribute('scrolling', 'no')
+  // container.setAttribute('scrolling', 'no')
 
   container.setAttribute('data-page-id', pageId)
   container.setAttribute('sandbox', 'allow-top-navigation allow-popups allow-scripts allow-forms allow-pointer-lock allow-popups-to-escape-sandbox allow-same-origin allow-modals')

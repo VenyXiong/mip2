@@ -75,20 +75,25 @@ let viewport = {
    * @return {HTMLElement} wrapper
    */
   reparentBody () {
-    const wrapper = document.createElement('html')
-    // Setup classes and styles
-    wrapper.className = document.documentElement.className
-    document.documentElement.className = 'mip-html-embeded'
-    wrapper.classList.add('mip-html-wrapper')
-    // Attach wrapper straight inside the document root
-    document.documentElement.appendChild(wrapper)
-    // Reparent the body
-    const body = document.body
-    wrapper.appendChild(body)
-    Object.defineProperty(document, 'body', {
-      get: () => body
-    })
-    return wrapper
+    // const wrapper = document.createElement('html')
+    // // Setup classes and styles
+    // wrapper.className = document.documentElement.className
+    // document.documentElement.className = 'mip-html-embeded'
+    // wrapper.classList.add('mip-html-wrapper')
+    // // Attach wrapper straight inside the document root
+    // document.documentElement.appendChild(wrapper)
+    // // Reparent the body
+    // const body = document.body
+    // wrapper.appendChild(body)
+    // Object.defineProperty(document, 'body', {
+    //   get: () => body
+    // })
+    // return wrapper
+
+    document.documentElement.classList.add('mip-html-embeded')
+    document.body.classList.add('mip-html-wrapper')
+
+    return document.body
   },
 
   /**
